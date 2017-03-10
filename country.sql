@@ -1,0 +1,253 @@
+# ************************************************************
+# Sequel Pro SQL dump
+# Version 4096
+#
+# http://www.sequelpro.com/
+# http://code.google.com/p/sequel-pro/
+#
+# Host: 127.0.0.1 (MySQL 10.1.18-MariaDB)
+# Database: test
+# Generation Time: 2017-03-10 05:25:31 +0000
+# ************************************************************
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+
+# Dump of table country
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `country`;
+
+CREATE TABLE `country` (
+  `cid` int(11) NOT NULL AUTO_INCREMENT,
+  `r` varchar(100) NOT NULL,
+  `e` varchar(100) NOT NULL,
+  `ccode` char(2) NOT NULL,
+  `region` int(11) NOT NULL,
+  PRIMARY KEY (`cid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+LOCK TABLES `country` WRITE;
+/*!40000 ALTER TABLE `country` DISABLE KEYS */;
+
+INSERT INTO `country` (`cid`, `r`, `e`, `ccode`, `region`)
+VALUES
+	(1,'США','USA','US',3),
+	(2,'Россия','Russia','RU',1),
+	(3,'Австралия','Australia','AU',5),
+	(4,'Австрия','Austria','AT',1),
+	(5,'Азербайджан','Azerbaijan','AZ',1),
+	(6,'Аргентина','Argentina','AR',4),
+	(7,'Армения','Armenia','AM',1),
+	(8,'Беларусь','Belarus','BY',1),
+	(9,'Белиз','Belize','BZ',3),
+	(10,'Бельгия','Belgium','BE',1),
+	(11,'Болгария','Bulgaria','BG',1),
+	(12,'Бразилия','Brazil','BR',4),
+	(13,'Великобритания','United Kingdom','GB',1),
+	(14,'Венгрия','Hungary','HU',1),
+	(15,'Вьетнам','Vietnam','VN',2),
+	(16,'Гаити','Haiti','HT',3),
+	(17,'Гваделупа','Guadeloupe','GP',3),
+	(18,'Германия','Germany','DE',1),
+	(20,'Гондурас','Honduras','HN',3),
+	(21,'Гонконг','Hong Kong','HK',2),
+	(22,'Греция','Greece','GR',1),
+	(23,'Грузия','Georgia','GE',1),
+	(24,'Дания','Denmark','DK',1),
+	(25,'Египет','Egypt','EG',6),
+	(26,'Израиль','Israel','IL',1),
+	(27,'Индия','India','IN',2),
+	(28,'Индонезия','Indonesia','ID',2),
+	(29,'Иордания','Jordan','JO',2),
+	(30,'Ирак','Iraq','IQ',2),
+	(31,'Иран','Iran','IR',2),
+	(32,'Ирландия','Ireland','IE',1),
+	(33,'Испания','Spain','ES',1),
+	(34,'Италия','Italy','IT',1),
+	(35,'Казахстан','Kazakhstan','KZ',1),
+	(36,'Камерун','Cameroon','CM',6),
+	(37,'Канада','Canada','CA',3),
+	(38,'Кипр','Cyprus','CY',1),
+	(39,'Киргызстан','Kyrgyzstan','KG',2),
+	(40,'Китай','China','CN',2),
+	(41,'Ceверная Корея','North Korea','KP',2),
+	(42,'Коста-Рика','Costa Rica','CR',3),
+	(43,'Куба','Cuba','CU',3),
+	(44,'Кувейт','Kuwait','KW',2),
+	(45,'Латвия','Latvia','LV',1),
+	(46,'Ливан','Lebanon','LB',2),
+	(47,'Ливия','Libya','LY',6),
+	(48,'Литва','Lithuania','LT',1),
+	(49,'Люксембург','Luxembourg','LU',1),
+	(50,'Македония','Macedonia','MK',1),
+	(51,'Малайзия','Malaysia','MY',2),
+	(52,'Мальта','Malta','MT',1),
+	(53,'Мексика','Mexico','MX',3),
+	(54,'Мозамбик','Mozambique','MZ',6),
+	(55,'Молдова','Moldova','MD',1),
+	(56,'Монако','Monaco','MC',1),
+	(57,'Монголия','Mongolia','MN',2),
+	(58,'Морокко','Morokko','MA',6),
+	(59,'Нидерланды','Netherlands','NL',1),
+	(60,'Новая Зеландия','New Zealand','NZ',5),
+	(61,'Норвегия','Norway','NO',1),
+	(62,'О.А.Э.','United Arab Emirates','AE',2),
+	(63,'Пакистан','Pakistan','PK',2),
+	(64,'Перу','Peru','PE',4),
+	(65,'Польша','Poland','PL',1),
+	(66,'Португалия','Portugal','PT',1),
+	(67,'Румыния','Romania','RO',1),
+	(68,'Сальвадор','Salvador','SV',3),
+	(69,'Сингапур','Singapore','SG',2),
+	(70,'Сирия','Syria','SY',2),
+	(71,'Словакия','Slovakia','SK',1),
+	(72,'Словения','Slovenia','SI',1),
+	(73,'Суринам','Surinam','SR',4),
+	(74,'Таджикистан','Tajikistan','TJ',2),
+	(75,'Тайвань','Taiwan','TW',2),
+	(76,'Тайланд','Thailand','TH',2),
+	(77,'Тунис','Tunisia','TN',6),
+	(78,'Туркмения','Turkmenistan','TM',2),
+	(79,'Турция','Turkey','TR',1),
+	(80,'Уганда','Uganda','UG',6),
+	(81,'Узбекистан','Uzbekistan','UZ',2),
+	(82,'Украина','Ukraine','UA',1),
+	(83,'Финляндия','Finland','FI',1),
+	(84,'Франция','France','FR',1),
+	(85,'Хорватия','Croatia','HR',1),
+	(86,'Чехия','Czech Republic','CZ',1),
+	(87,'Чили','Chile','CL',6),
+	(88,'Швейцария','Switzerland','CH',1),
+	(89,'Швеция','Sweden','SE',1),
+	(90,'Эквадор','Ecuador','EC',4),
+	(91,'Эстония','Estonia','EE',1),
+	(92,'ЮАР','South Africa','ZA',6),
+	(94,'Южная Корея','South Korea','KR',2),
+	(95,'Ямайка','Jamaica','JM',3),
+	(96,'Япония','Japan','JP',2),
+	(97,'Филиппины','Philippines','PH',2),
+	(98,'Саудовская Аравия','Saudi Arabia','SA',2),
+	(100,'Оман','Oman','OM',2),
+	(101,'Сербия','Serbia','RS',1),
+	(102,'Лихтенштейн','Liechtenstein','LI',1),
+	(103,'Босния и Герцеговина','Bosnia and Herzegovina','BA',1),
+	(104,'Доминиканская Республика','Dominican Republic','DO',4),
+	(105,'Пуэрто-Рико','Puerto Rico','PR',3),
+	(106,'Боливия','Bolivia','BO',4),
+	(107,'Непал','Nepal','NP',2),
+	(108,'Папуа - Новая Гвинея','Papua New Guinea','PG',5),
+	(109,'Багамские острова','Bahamas','BS',3),
+	(110,'Сент-Люсия','Saint Lucia','LC',3),
+	(111,'Доминика','Dominica','DM',4),
+	(112,'Бангладеш','Bangladesh','BD',2),
+	(113,'Камбоджа','Cambodia','KH',2),
+	(115,'Мальдивы','Maldives','MV',2),
+	(116,'Афганистан','Afghanistan','AF',2),
+	(117,'Фиджи','Fiji','FJ',5),
+	(118,'Катар','Qatar','QA',2),
+	(119,'Нигерия','Nigeria','NG',6),
+	(120,'Исландия','Iceland','IS',1),
+	(121,'Албания','Albania','AL',1),
+	(122,'Йемен','Yemen','YE',2),
+	(124,'Венесуэла','Venezuela','VE',4),
+	(125,'Колумбия','Colombia','CO',4),
+	(126,'Алжир','Algeria','DZ',6),
+	(127,'Ангола','Angola','AO',6),
+	(128,'Судан','Sudan','SD',6),
+	(129,'Шри-Ланка','Sri Lanka','LK',2),
+	(130,'Гватемала','Guatemala','GT',3),
+	(131,'Уругвай','Uruguay','UY',4),
+	(132,'Мьянма','Myanmar','MM',2),
+	(133,'Кения','Kenya','KE',6),
+	(134,'Эфиопия','Ethiopia','ET',6),
+	(135,'Панама','Panama','PA',3),
+	(136,'Танзания','Tanzania, United Republic of','TZ',6),
+	(137,'Кот-д\'Ивуар','Cote D\'Ivoire','CI',6),
+	(138,'Бахрейн','Bahrain','BH',2),
+	(139,'Тринидад и Тобаго','Trinidad and Tobago','TT',4),
+	(140,'Гана','Ghana','GH',6),
+	(141,'Парагвай','Paraguay','PY',4),
+	(142,'Замбия','Zambia','ZM',6),
+	(143,'Экваториальная Гвинея','Equatorial Guinea','GQ',6),
+	(144,'Сенегал','Senegal','SN',6),
+	(145,'Демократическая Республика Конго','Congo, The Democratic Republic of the','CD',6),
+	(146,'Габон','Gabon','GA',6),
+	(147,'Бруней-Даруссалам','Brunei Darussalam','BN',2),
+	(148,'Республика Конго','Congo','CG',6),
+	(149,'Намибия','Namibia','NA',6),
+	(150,'Маврикий','Mauritius','MU',6),
+	(151,'Мали','Mali','ML',6),
+	(152,'Буркина-Фасо','Burkina Faso','BF',6),
+	(153,'Мадагаскар','Madagascar','MG',6),
+	(154,'Чад','Chad','TD',6),
+	(155,'Бенин','Benin','BJ',6),
+	(156,'Никарагуа','Nicaragua','NI',3),
+	(157,'Лесото','Lesotho','LS',6),
+	(158,'Руанда','Rwanda','RW',6),
+	(159,'Нигер','Niger','NE',6),
+	(160,'Зимбабве','Zimbabwe','ZW',6),
+	(161,'Малави','Malawi','MW',6),
+	(162,'Гвинея','Guinea','GN',6),
+	(163,'Барбадос','Barbados','BB',4),
+	(164,'Черногория','Montenegro','ME',1),
+	(165,'Мавритания','Mauritania','MR',6),
+	(166,'Свазиленд','Swaziland','SZ',6),
+	(167,'Того','Togo','TG',6),
+	(168,'Эритрея','Eritrea','ER',6),
+	(169,'Гайана','Guyana','GY',4),
+	(170,'Центрально-Африканская Республика','Central African Republic','CF',6),
+	(171,'Сьерра-Леоне','Sierra Leone','SL',6),
+	(172,'Кабо-Верде','Cape Verde','CV',6),
+	(173,'Бурунди','Burundi','BI',6),
+	(174,'Бутан','Bhutan','BT',2),
+	(175,'Джибути','Djibouti','DJ',6),
+	(176,'Антигуа и Барбуда','Antigua and Barbuda','AG',4),
+	(177,'Гамбия','Gambia','GM',6),
+	(178,'Либерия','Liberia','LR',6),
+	(179,'Сейшельские острова','Seychelles','SC',6),
+	(180,'Фарерские острова','Faroe Islands','FO',1),
+	(182,'Гернси','Guernsey','GG',1),
+	(183,'Ватикан','Holy See (Vatican City State)','VA',1),
+	(185,'Сан-Марино','San Marino','SM',1),
+	(187,'Андорра','Andorra','AD',1),
+	(190,'Аруба','Aruba','AW',4),
+	(191,'Ботсвана','Botswana','BW',6),
+	(193,'Западная Сахара','Western Sahara','EH',6),
+	(195,'Федеративные Штаты Микронезии','Micronesia, Federated States of','FM',5),
+	(196,'Гренада','Grenada','GD',4),
+	(199,'Гвинея-Бисау','Guinea-Bissau','GW',6),
+	(200,'Кирибати','Kiribati','KI',5),
+	(201,'Сент-Китс и Невис','Saint Kitts and Nevis','KN',3),
+	(203,'Лаосская Народно-Демократическая Республика','Lao People\'s Democratic Republic','LA',2),
+	(204,'Маршалловы острова','Marshall Islands','MH',5),
+	(207,'Науру','Nauru','NR',5),
+	(210,'Палау','Palau','PW',5),
+	(211,'Соломоновы Острова','Solomon Islands','SB',5),
+	(212,'Сомали','Somalia','SO',6),
+	(213,'Сан-Томе и Принсипи','Sao Tome and Principe','ST',6),
+	(214,'Восточный Тимор','Timor-Leste','TL',2),
+	(215,'Тонга','Tonga','TO',5),
+	(216,'Тувалу','Tuvalu','TV',5),
+	(217,'Сент-Винсент и Гренадины','Saint Vincent and the Grenadines','VC',3),
+	(218,'Вануату','Vanuatu','VU',5),
+	(219,'Самоа','Samoa','WS',5);
+
+/*!40000 ALTER TABLE `country` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
